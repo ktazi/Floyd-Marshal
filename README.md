@@ -1,2 +1,2 @@
-# Floyd-Marshal
-Floyd-Warshall in java, project for "Théorie des graphes" in L3 Efrei Paris
+# Floyd-Marshall
+Write Floyd-Warshall algorithm in java, project for "Théorie des graphes" in L3 Efrei Paris
