@@ -24,6 +24,27 @@ public class Misc {
             System.out.println("");
         }
     }
+    
+    public static void print_matrix_adja2(ArrayList<ArrayList<Integer>> m){
+        for(ArrayList<Integer> a : m)
+        {
+            for(Integer n : a){
+                System.out.print(n);
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+    }   
+    public static void print_matrix_valeur(ArrayList<ArrayList<Numbers>> m){
+        for(ArrayList<Numbers> a : m)
+        {
+            for(Numbers n : a){
+                n.print_valeur();
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+    }
 
 
 }

@@ -8,10 +8,26 @@ import java.util.Map;
 
 public class Graph {
 
-    private HashMap<Integer, HashMap<Integer, Integer>> graph;
+	private HashMap<Integer, HashMap<Integer, Integer>> graph;
+   
+	public ArrayList<ArrayList<Integer>> matriceAdj;
+   
 
     public Graph(HashMap<Integer, HashMap<Integer, Integer>> g) {
         this.graph = g;
+        
+         matriceAdj = new ArrayList<>();
+        for(int i  = 0; i < graph.size(); i++) {
+            matriceAdj.add(new ArrayList<>());
+            for(int j = 0; j < graph.size(); j++)
+                matriceAdj.get(i).add(0);
+        }
+        for (Map.Entry<Integer, HashMap<Integer, Integer>> e1 : graph.entrySet()){ //key = noeud dep
+            for(Map.Entry<Integer, Integer> e2 : e1.getValue().entrySet()) { //key = noeud arr
+                matriceAdj.get(e1.getKey()).set(e2.getKey(), 1);
+            }
+        }
+        
     }
 
     public void print_edges_from_vertice(int v)
@@ -27,6 +43,8 @@ public class Graph {
         }
     }
 
+    
+    
     public ArrayList <ArrayList<Numbers>> toMatrix(){
         ArrayList<ArrayList<Numbers>> l = new ArrayList<>();
         for(int i  = 0; i < graph.size(); i++) {
@@ -118,10 +136,7 @@ public class Graph {
             }
             return this;
         }
-        GraphBuilder from_matrix(ArrayList <Numbers> matrix){
-
-            return this;
-        }
+        
         Graph build()
         {
             return new Graph(this.graph);
