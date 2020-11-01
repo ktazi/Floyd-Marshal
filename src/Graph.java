@@ -11,8 +11,11 @@ public class Graph {
 	private HashMap<Integer, HashMap<Integer, Integer>> graph;
    
 	public ArrayList<ArrayList<Integer>> matriceAdj;
-   
 
+    /**
+     * Constructor of a graph
+     * @param g, the hashmap that contains the graph
+     */
     public Graph(HashMap<Integer, HashMap<Integer, Integer>> g) {
         this.graph = g;
         
@@ -27,24 +30,12 @@ public class Graph {
                 matriceAdj.get(e1.getKey()).set(e2.getKey(), 1);
             }
         }
-        
     }
 
-    public void print_edges_from_vertice(int v)
-    {
-        if(!graph.containsKey(v))
-            System.out.println("Ce noeud n'existe pas");
-        else
-        {
-            System.out.println("Noeud "+v+" : ");
-            for (Map.Entry<Integer, Integer> entry : graph.get(v).entrySet()){
-                System.out.println("Arc allant vers "+entry.getKey()+" de valeur "+entry.getValue());
-            }
-        }
-    }
-
-    
-    
+    /**
+     * Function that converts the HashMap in distance matrix
+     * @return the distance matrix
+     */
     public ArrayList <ArrayList<Numbers>> toMatrix(){
         ArrayList<ArrayList<Numbers>> l = new ArrayList<>();
         for(int i  = 0; i < graph.size(); i++) {
