@@ -25,8 +25,6 @@ public class FloydWarshall {
                 ch.get(i).add(-1);
             }
         }
-        Misc.println(bw,"\nMatrice de valeur: ");
-        Misc.print_matrix_valeur(matrix, bw);
         Misc.println(bw,"\nMatrice W0 de depart : ");
         Misc.println(bw,"");
         Misc.print_matrix_valeur(matrix, bw);
