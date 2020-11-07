@@ -1,6 +1,18 @@
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Misc {
+    public static void println(BufferedWriter bw, String s) throws IOException {
+        System.out.println(s);
+        bw.write(s);
+        bw.newLine();
+    }
+    public static void print(BufferedWriter bw, String s) throws IOException {
+        System.out.print(s);
+        bw.write(s);
+    }
+
     /**
      * Function that returns whether a String is an Integer
      * @param s the string
@@ -22,7 +34,7 @@ public class Misc {
      * A function that prints on the terminal a matrix containing integers
      * @param m the matrix
      */
-    public static void print_matrix_adja(ArrayList<ArrayList<Integer>> m){
+    public static void print_matrix_adja(ArrayList<ArrayList<Integer>> m, BufferedWriter bw) throws IOException {
         int max = 0;
         for (ArrayList<Integer> tab : m){
             for (Integer i : tab){
@@ -32,56 +44,55 @@ public class Misc {
         max = Math.max(max, Integer.toString(m.size()).length());
         //display of the name of the columns
         for (int j = 0; j < max; j++)
-            System.out.print(' ');
-        System.out.print("  ");
+            Misc.print(bw," ");
+        Misc.print(bw,"  ");
         for (int i = 0; i < m.size();i++){
             if (Integer.toString(i).length() < max)
             {
                 for (int j = 0; j < max - Integer.toString(i).length(); j++)
-                    System.out.print(' ');
+                    Misc.print(bw," ");
             }
-            System.out.print(i);
-            System.out.print(' ');
+            Misc.print(bw,Integer.toString(i));
+            Misc.print(bw," ");
         }
-        System.out.println("");
+        Misc.println(bw,"");
         for (int j = 0; j < max; j++)
-            System.out.print(' ');
-        System.out.print("  ");
+            Misc.print(bw," ");
+        Misc.print(bw,"  ");
         for (int i = 0; i < m.size();i++){
                 for (int j = 0; j <= max; j++)
-                    System.out.print('_');
+                    Misc.print(bw,"_");
         }
-        System.out.println();
+        Misc.println(bw, "");
         int it = 0;
         for (ArrayList<Integer> tab : m){
             //display of the name of the row
-            System.out.print(it);
+            Misc.print(bw, Integer.toString(it));
             if (Integer.toString(it).length() < max)
             {
                 for (int j = 0; j < max - Integer.toString(it).length(); j++)
-                    System.out.print(' ');
+                    Misc.print(bw," ");
             }
-            System.out.print(' ');
-            System.out.print('|');
-
+            Misc.print(bw," ");
+            Misc.print(bw,"|");
             it++;
             for (Integer i : tab){
                 if (i.toString().length() < max)
                 {
                     for (int j = 0; j < max - i.toString().length(); j++)
-                        System.out.print(' ');
+                        Misc.print(bw," ");
                 }
-                System.out.print(i);
-                System.out.print(' ');
+                Misc.print(bw, Integer.toString(i));
+                Misc.print(bw," " );
             }
-            System.out.println();
+            Misc.println(bw,"");
         }
     }
     /**
      * A function that prints on the terminal a matrix containing numbers
      * @param m the matrix
      */
-    public static void print_matrix_valeur(ArrayList<ArrayList<Numbers>> m) {
+    public static void print_matrix_valeur(ArrayList<ArrayList<Numbers>> m, BufferedWriter bw) throws IOException {
         int max = 0;
         for (ArrayList<Numbers> tab : m) {
             for (Numbers i : tab) {
@@ -91,46 +102,46 @@ public class Misc {
         max = Math.max(max, Integer.toString(m.size()).length());
         //display of the name of the columns
         for (int j = 0; j < max; j++)
-            System.out.print(' ');
-        System.out.print("  ");
+            Misc.print(bw," ");
+        Misc.print(bw,"  ");
         for (int i = 0; i < m.size(); i++) {
             if (Integer.toString(i).length() < max) {
                 for (int j = 0; j < max - Integer.toString(i).length(); j++)
-                    System.out.print(' ');
+                    Misc.print(bw," ");
             }
-            System.out.print(i);
-            System.out.print(' ');
+            Misc.print(bw, Integer.toString(i));
+            Misc.print(bw," ");
         }
-        System.out.println("");
+        Misc.println(bw,"");
         for (int j = 0; j < max; j++)
-            System.out.print(' ');
-        System.out.print("  ");
+            Misc.print(bw," ");
+        Misc.print(bw," ");
         for (int i = 0; i < m.size(); i++) {
             for (int j = 0; j <= max; j++)
-                System.out.print('_');
+                Misc.print(bw, "_");
         }
-        System.out.println();
+        Misc.println(bw,"");
         int it = 0;
         for (ArrayList<Numbers> tab : m) {
             //display of the name of the row
-            System.out.print(it);
+            Misc.print(bw,Integer.toString(it));
             if (Integer.toString(it).length() < max) {
                 for (int j = 0; j < max - Integer.toString(it).length(); j++)
-                    System.out.print(' ');
+                    Misc.print(bw," ");
             }
-            System.out.print(' ');
-            System.out.print('|');
+            Misc.print(bw," ");
+            Misc.print(bw,"|");
 
             it++;
             for (Numbers i : tab) {
                 if (i.toString().length() < max) {
                     for (int j = 0; j < max - i.toString().length(); j++)
-                        System.out.print(' ');
+                        Misc.print(bw," ");
                 }
-                System.out.print(i);
-                System.out.print(' ');
+                Misc.print(bw,i.toString());
+                Misc.print(bw," ");
             }
-            System.out.println("");
+            Misc.println(bw,"");
         }
     }
 
@@ -141,11 +152,11 @@ public class Misc {
      * @param dep the first vertex
      * @param arr the last vertex
      */
-    public static void cheminPlusCourt(ArrayList<ArrayList<Integer>> ch,ArrayList<ArrayList<Numbers>> n,  int dep, int arr){
+    public static void cheminPlusCourt(ArrayList<ArrayList<Integer>> ch,ArrayList<ArrayList<Numbers>> n,  int dep, int arr, BufferedWriter bw) throws IOException {
         if (n.get(dep).get(arr).isInfinite())
-            System.out.println("ce n'est pas possible d'aller de "+ dep + " a " + arr);
+            Misc.println(bw,"ce n'est pas possible d'aller de "+ dep + " a " + arr);
         else {
-            System.out.print("Le chemin le plus cours pour aller de "+ dep + " a " + arr+ " est : ");
+            Misc.print(bw,"Le chemin le plus cours pour aller de "+ dep + " a " + arr+ " est : ");
                 ArrayList<Integer> list = new ArrayList<>();
                 list.add(dep);
                 list.add(arr);
@@ -160,9 +171,9 @@ public class Misc {
                     }
                 }
                 for (Integer d : list){
-                    System.out.print(d + " ");
+                    Misc.print(bw,d + " ");
                 }
-                System.out.println("");
+            Misc.println(bw,"");
             }
         }
 }

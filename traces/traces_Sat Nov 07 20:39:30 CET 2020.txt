@@ -1,0 +1,28 @@
+_____________________________________________________________
+
+            Projet de theorie des graphes
+              L3 Groupe A, promo 2023
+     Matthieu Hanania, Tristan Fiévet, Kenza Tazi
+
+_____________________________________________________________
+
+
+_____________________________________________________________
+SELECTION D'UN GRAPHE
+_____________________________________________________________
+
+Veuillez sélectionner un Graphe > 
+Matrice d'adjacence : 
+
+
+Matrice des valeurs : 
+
+
+_____________________________________________________________
+IMPRESSION DES CHEMINS
+_____________________________________________________________
+
+Sommet de depart (un chiffre entre 0 et 3 ) > 2
+Sommet d'arrivee (un chiffre entre 0 et 3 ) > 1
+Voulez-vous tester avec un nouveau chemin ? (y-n)> n
+Voulez-vous tester avec un nouveau graphe ? (y-n)> n

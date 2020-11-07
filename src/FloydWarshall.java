@@ -1,3 +1,5 @@
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class FloydWarshall {
@@ -6,7 +8,7 @@ public class FloydWarshall {
      * @param matrix distance matrix of a graph
      * @return both the "matrice des intermediaire" and final Wn matrix
      */
-    public static Result fW(ArrayList<ArrayList<Numbers>> matrix) {
+    public static Result fW(ArrayList<ArrayList<Numbers>> matrix, BufferedWriter bw) throws IOException {
         ArrayList<ArrayList<Numbers>> m = new ArrayList<>();
         //initializing list
         for(int i = 0; i < matrix.size(); i++) {
@@ -23,16 +25,16 @@ public class FloydWarshall {
                 ch.get(i).add(-1);
             }
         }
-        System.out.println("\nMatrice de valeur: ");
-        Misc.print_matrix_valeur(matrix);
-        System.out.println("\nMatrice W0 de depart : ");
-        System.out.println();
-        Misc.print_matrix_valeur(matrix);
-        System.out.println();
+        Misc.println(bw,"\nMatrice de valeur: ");
+        Misc.print_matrix_valeur(matrix, bw);
+        Misc.println(bw,"\nMatrice W0 de depart : ");
+        Misc.println(bw,"");
+        Misc.print_matrix_valeur(matrix, bw);
+        Misc.println(bw,"");
         //n occurences
         for(int i = 0; i < matrix.size(); i++){
-            System.out.println("Matrice W"+(i+1)+" :");
-            System.out.println();
+            Misc.println(bw,"Matrice W"+(i+1)+" :");
+            Misc.println(bw,"");
             for(int j = 0; j < matrix.size(); j++){
                 for(int k = 0; k < matrix.size(); k++){
                     if(Numbers.diff(matrix.get(j).get(k).min(matrix.get(j).get(i),matrix.get(i).get(k)), matrix.get(j).get(k)))
@@ -45,13 +47,13 @@ public class FloydWarshall {
                 if (m.get(j).get(j).value() < 0)
                     return null;
             }
-            Misc.print_matrix_valeur(m);
-            System.out.println();
+            Misc.print_matrix_valeur(m, bw);
+            Misc.println(bw,"");
             matrix = m;
         }
-        System.out.println("Resultat final : ");
-        System.out.println();
-        Misc.print_matrix_valeur(m);
+        Misc.println(bw,"Resultat final : ");
+        Misc.println(bw,"");
+        Misc.print_matrix_valeur(m, bw);
         Result r = new Result(m, ch);
         return r;
     }

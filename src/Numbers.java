@@ -45,7 +45,9 @@ public class Numbers {
      * @return true if the numbers are different
      */
     public static boolean diff (Numbers a, Numbers b){
-        return a.infinite != b.infinite || a.value != b.value;
+
+        //return a.infinite != b.infinite && (a.infinite && b.value;
+        return (a.infinite == b.infinite && !a.infinite && b.value != a.value ) || (a.infinite !=b.infinite);
     }
 
     /**
@@ -71,5 +73,5 @@ public class Numbers {
             return this;
         return this.value < n.value ? this : n;
     }
-    
+
 }
