@@ -1,0 +1,95 @@
+_____________________________________________________________
+
+            Projet de theorie des graphes
+              L3 Groupe A, promo 2023
+     Matthieu Hanania, Tristan Fiévet, Kenza Tazi
+
+_____________________________________________________________
+
+
+_____________________________________________________________
+SELECTION D'UN GRAPHE
+_____________________________________________________________
+
+Veuillez sélectionner un Graphe > 3
+Matrice d'adjacence : 
+
+   0 1 2 3 
+   ________
+0 |0 1 1 0 
+1 |0 0 1 1 
+2 |0 1 0 1 
+3 |0 0 0 0 
+
+Matrice des valeurs : 
+       0   1   2   3 
+    ________________
+0   |  0   1  -5 inf 
+1   |inf   0  -3   2 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+
+Matrice W0 de depart : 
+
+       0   1   2   3 
+    ________________
+0   |  0   1  -5 inf 
+1   |inf   0  -3   2 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+Matrice W1 :
+
+       0   1   2   3 
+    ________________
+0   |  0   1  -5 inf 
+1   |inf   0  -3   2 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+Matrice W2 :
+
+       0   1   2   3 
+    ________________
+0   |  0   1  -5   3 
+1   |inf   0  -3   2 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+Matrice W3 :
+
+       0   1   2   3 
+    ________________
+0   |  0  -1  -5  -3 
+1   |inf   0  -3  -1 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+Matrice W4 :
+
+       0   1   2   3 
+    ________________
+0   |  0  -1  -5  -3 
+1   |inf   0  -3  -1 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+Resultat final : 
+
+       0   1   2   3 
+    ________________
+0   |  0  -1  -5  -3 
+1   |inf   0  -3  -1 
+2   |inf   4   0   2 
+3   |inf inf inf   0 
+
+_____________________________________________________________
+IMPRESSION DES CHEMINS
+_____________________________________________________________
+
+Sommet de depart (un chiffre entre 0 et 3 ) > 2
+Sommet d'arrivee (un chiffre entre 0 et 3 ) > 1
+Le chemin le plus cours pour aller de 2 a 1 est : 2 1 
+Voulez-vous tester avec un nouveau chemin ? (y-n)> n
+Voulez-vous tester avec un nouveau graphe ? (y-n)> n

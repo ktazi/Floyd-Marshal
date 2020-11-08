@@ -1,0 +1,123 @@
+_____________________________________________________________
+
+            Projet de theorie des graphes
+              L3 Groupe A, promo 2023
+     Matthieu Hanania, Tristan Fiévet, Kenza Tazi
+
+_____________________________________________________________
+
+
+_____________________________________________________________
+SELECTION D'UN GRAPHE
+_____________________________________________________________
+
+Veuillez sélectionner un Graphe > 13
+Matrice d'adjacence : 
+
+   0 1 2 3 4 5 6 7 
+   ________________
+0 |0 0 1 1 0 0 0 0 
+1 |1 0 0 0 1 0 0 0 
+2 |0 0 0 1 0 0 0 0 
+3 |0 0 1 0 1 0 0 0 
+4 |0 1 1 0 0 0 0 0 
+5 |0 0 0 0 0 0 1 0 
+6 |0 0 0 0 0 1 0 1 
+7 |0 0 0 0 0 0 0 0 
+
+Matrice des valeurs : 
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0 inf   2   1 inf inf inf inf 
+1   |  1   0 inf inf   1 inf inf inf 
+2   |inf inf   0  -2 inf inf inf inf 
+3   |inf inf   7   0   4 inf inf inf 
+4   |inf   3  -1 inf   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+
+Matrice W0 de depart : 
+
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0 inf   2   1 inf inf inf inf 
+1   |  1   0 inf inf   1 inf inf inf 
+2   |inf inf   0  -2 inf inf inf inf 
+3   |inf inf   7   0   4 inf inf inf 
+4   |inf   3  -1 inf   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+Matrice W1 :
+
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0 inf   2   1 inf inf inf inf 
+1   |  1   0   3   2   1 inf inf inf 
+2   |inf inf   0  -2 inf inf inf inf 
+3   |inf inf   7   0   4 inf inf inf 
+4   |inf   3  -1 inf   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+Matrice W2 :
+
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0 inf   2   1 inf inf inf inf 
+1   |  1   0   3   2   1 inf inf inf 
+2   |inf inf   0  -2 inf inf inf inf 
+3   |inf inf   7   0   4 inf inf inf 
+4   |  4   3  -1   5   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+Matrice W3 :
+
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0 inf   2   0 inf inf inf inf 
+1   |  1   0   3   1   1 inf inf inf 
+2   |inf inf   0  -2 inf inf inf inf 
+3   |inf inf   7   0   4 inf inf inf 
+4   |  4   3  -1  -3   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+Matrice W4 :
+
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0 inf   2   0   4 inf inf inf 
+1   |  1   0   3   1   1 inf inf inf 
+2   |inf inf   0  -2   2 inf inf inf 
+3   |inf inf   7   0   4 inf inf inf 
+4   |  4   3  -1  -3   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+Matrice W5 :
+
+       0   1   2   3   4   5   6   7 
+    ________________________________
+0   |  0   7   2   0   4 inf inf inf 
+1   |  1   0   0  -2   1 inf inf inf 
+2   |  6   5   0  -2   2 inf inf inf 
+3   |  8   7   3   0   4 inf inf inf 
+4   |  4   3  -1  -3   0 inf inf inf 
+5   |inf inf inf inf inf   0   1 inf 
+6   |inf inf inf inf inf  -2   0  -2 
+7   |inf inf inf inf inf inf inf   0 
+
+Matrice W6 :
+
+
+Presence de circuits absorbants !
+Voulez-vous tester avec un nouveau graphe ? (y-n)> n

@@ -1,0 +1,79 @@
+_____________________________________________________________
+
+            Projet de theorie des graphes
+              L3 Groupe A, promo 2023
+     Matthieu Hanania, Tristan Fiévet, Kenza Tazi
+
+_____________________________________________________________
+
+
+_____________________________________________________________
+SELECTION D'UN GRAPHE
+_____________________________________________________________
+
+Veuillez sélectionner un Graphe > 10
+Matrice d'adjacence : 
+
+   0 1 2 3 4 
+   __________
+0 |0 1 1 1 0 
+1 |0 0 0 0 0 
+2 |0 0 0 1 0 
+3 |0 0 0 0 1 
+4 |0 1 1 0 0 
+
+Matrice des valeurs : 
+       0   1   2   3   4 
+    ____________________
+0   |  0   1   2   1 inf 
+1   |inf   0 inf inf inf 
+2   |inf inf   0  -2 inf 
+3   |inf inf inf   0   4 
+4   |inf   3  -7 inf   0 
+
+
+Matrice W0 de depart : 
+
+       0   1   2   3   4 
+    ____________________
+0   |  0   1   2   1 inf 
+1   |inf   0 inf inf inf 
+2   |inf inf   0  -2 inf 
+3   |inf inf inf   0   4 
+4   |inf   3  -7 inf   0 
+
+Matrice W1 :
+
+       0   1   2   3   4 
+    ____________________
+0   |  0   1   2   1 inf 
+1   |inf   0 inf inf inf 
+2   |inf inf   0  -2 inf 
+3   |inf inf inf   0   4 
+4   |inf   3  -7 inf   0 
+
+Matrice W2 :
+
+       0   1   2   3   4 
+    ____________________
+0   |  0   1   2   1 inf 
+1   |inf   0 inf inf inf 
+2   |inf inf   0  -2 inf 
+3   |inf inf inf   0   4 
+4   |inf   3  -7 inf   0 
+
+Matrice W3 :
+
+       0   1   2   3   4 
+    ____________________
+0   |  0   1   2   0 inf 
+1   |inf   0 inf inf inf 
+2   |inf inf   0  -2 inf 
+3   |inf inf inf   0   4 
+4   |inf   3  -7  -9   0 
+
+Matrice W4 :
+
+
+Presence de circuits absorbants !
+Voulez-vous tester avec un nouveau graphe ? (y-n)> n

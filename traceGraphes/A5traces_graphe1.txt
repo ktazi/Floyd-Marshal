@@ -11,7 +11,7 @@ _____________________________________________________________
 SELECTION D'UN GRAPHE
 _____________________________________________________________
 
-Veuillez sélectionner un Graphe > 2
+Veuillez sélectionner un Graphe > 1
 Matrice d'adjacence : 
 
    0 1 2 3 
@@ -25,25 +25,17 @@ Matrice des valeurs :
        0   1   2   3 
     ________________
 0   |  0   1   5 inf 
-1   |inf   0  -3   5 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
-
-Matrice de valeur: 
-       0   1   2   3 
-    ________________
-0   |  0   1   5 inf 
-1   |inf   0  -3   5 
-2   |inf inf   0   2 
-3   |inf inf inf   0 
 
 Matrice W0 de depart : 
 
        0   1   2   3 
     ________________
 0   |  0   1   5 inf 
-1   |inf   0  -3   5 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
@@ -52,7 +44,7 @@ Matrice W1 :
        0   1   2   3 
     ________________
 0   |  0   1   5 inf 
-1   |inf   0  -3   5 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
@@ -60,8 +52,8 @@ Matrice W2 :
 
        0   1   2   3 
     ________________
-0   |  0   1  -2   6 
-1   |inf   0  -3   5 
+0   |  0   1   4   6 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
@@ -69,8 +61,8 @@ Matrice W3 :
 
        0   1   2   3 
     ________________
-0   |  0   1  -2   0 
-1   |inf   0  -3  -1 
+0   |  0   1   4   6 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
@@ -78,8 +70,8 @@ Matrice W4 :
 
        0   1   2   3 
     ________________
-0   |  0   1  -2   0 
-1   |inf   0  -3  -1 
+0   |  0   1   4   6 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
@@ -87,8 +79,8 @@ Resultat final :
 
        0   1   2   3 
     ________________
-0   |  0   1  -2   0 
-1   |inf   0  -3  -1 
+0   |  0   1   4   6 
+1   |inf   0   3   5 
 2   |inf inf   0   2 
 3   |inf inf inf   0 
 
@@ -96,8 +88,8 @@ _____________________________________________________________
 IMPRESSION DES CHEMINS
 _____________________________________________________________
 
-Sommet de depart (un chiffre entre 0 et 3 ) > 1
-Sommet d'arrivee (un chiffre entre 0 et 3 ) > 2
-Le chemin le plus cours pour aller de 1 a 2 est : 1 2 
+Sommet de depart (un chiffre entre 0 et 3 ) > 2
+Sommet d'arrivee (un chiffre entre 0 et 3 ) > 1
+ce n'est pas possible d'aller de 2 a 1
 Voulez-vous tester avec un nouveau chemin ? (y-n)> n
 Voulez-vous tester avec un nouveau graphe ? (y-n)> n
