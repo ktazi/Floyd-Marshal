@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Graph {
+public class A5Graph {
 
 	private HashMap<Integer, HashMap<Integer, Integer>> graph;
 	public ArrayList<ArrayList<Integer>> matriceAdj;
@@ -15,7 +15,7 @@ public class Graph {
      * Constructor of a graph
      * @param g, the hashmap that contains the graph
      */
-    public Graph(HashMap<Integer, HashMap<Integer, Integer>> g) {
+    public A5Graph(HashMap<Integer, HashMap<Integer, Integer>> g) {
         this.graph = g;
         
          matriceAdj = new ArrayList<>();
@@ -35,22 +35,22 @@ public class Graph {
      * Function that converts the HashMap in distance matrix
      * @return the distance matrix
      */
-    public ArrayList <ArrayList<Numbers>> toMatrix(){
-        ArrayList<ArrayList<Numbers>> l = new ArrayList<>();
+    public ArrayList <ArrayList<A5Numbers>> toMatrix(){
+        ArrayList<ArrayList<A5Numbers>> l = new ArrayList<>();
         for(int i  = 0; i < graph.size(); i++) {
             l.add(new ArrayList<>());
             for(int j = 0; j < graph.size(); j++)
-                l.get(i).add(i == j ? new Numbers(false, 0) :null);
+                l.get(i).add(i == j ? new A5Numbers(false, 0) :null);
         }
         for (Map.Entry<Integer, HashMap<Integer, Integer>> e1 : graph.entrySet()){ //key = noeud dep
             for(Map.Entry<Integer, Integer> e2 : e1.getValue().entrySet()) { //key = noeud arr
-                l.get(e1.getKey()).set(e2.getKey(), new Numbers(false, e2.getValue()));
+                l.get(e1.getKey()).set(e2.getKey(), new A5Numbers(false, e2.getValue()));
             }
         }
         for(int i = 0; i < graph.size(); i++){
             for(int j = 0; j < graph.size(); j++){
                 if(l.get(i).get(j) == null)
-                    l.get(i).set(j, new Numbers(true, 0));
+                    l.get(i).set(j, new A5Numbers(true, 0));
             }
         }
         return l;
@@ -81,7 +81,7 @@ public class Graph {
             String ln = reader.readLine();
             if (ln == null)
                 throw new IllegalArgumentException("Fichier non réglementaire : la premiere ligne ne doit pas etre vide l:1");
-            if(!Misc.isInteger(ln)){
+            if(!A5Misc.isInteger(ln)){
                 throw new IllegalArgumentException("Fichier non réglementaire : Le nombre de noeuds n'est pas un chiffre de type entier l:1");
             }
             int taille = Integer.parseInt(ln);
@@ -95,7 +95,7 @@ public class Graph {
             ln = reader.readLine();
             if (ln == null)
                 throw new IllegalArgumentException("Fichier non réglementaire : la seconde ligne ne doit pas etre vide l:2");
-            if(!Misc.isInteger(ln))
+            if(!A5Misc.isInteger(ln))
                 throw new IllegalArgumentException("Fichier non réglementaire : Le nombre d'arcs n'est pas un chiffre de type entier l:2");
             int arcs = Integer.parseInt(ln);
             if (arcs < 0)
@@ -110,7 +110,7 @@ public class Graph {
                     throw new IllegalArgumentException("Fichier non réglementaire : Pas le bon nombre d'arguments pour décrire un arc. Attendu 3, dans le fichier " + data.length + " l:"+ (i+3));
                 for(int j = 0; j < 2; j++)
                 {
-                    if(!Misc.isInteger(data[j]))
+                    if(!A5Misc.isInteger(data[j]))
                         throw new IllegalArgumentException("Fichier non réglementaire : Le nom du noeud n°"+(j + 1)+" n'est pas un chiffre de type entier l:" + (i+3));
                     int temp = Integer.parseInt(data[j]);
                     if (temp < 0)
@@ -118,7 +118,7 @@ public class Graph {
                     if (temp >= taille)
                         throw new IllegalArgumentException("Fichier non réglementaire : Le nom du noeud n°"+(j + 1)+" n'existe pas l:"+(i+3));
                 }
-                if(!Misc.isInteger(data[2]))
+                if(!A5Misc.isInteger(data[2]))
                     throw new IllegalArgumentException("Fichier non réglementaire : Le poids de l'arc n'est pas un chiffre de type entier l:" + (i+3));
                 if(graph.get(Integer.parseInt(data[0])).containsKey(Integer.parseInt(data[1])))
                     throw new IllegalArgumentException("Fichier non réglementaire : L'arc décrit dans cette ligne est un doublon l:"+ (i+3));
@@ -127,9 +127,9 @@ public class Graph {
             return this;
         }
         
-        Graph build()
+        A5Graph build()
         {
-            return new Graph(this.graph);
+            return new A5Graph(this.graph);
         }
 
     }

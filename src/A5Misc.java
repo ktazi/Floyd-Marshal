@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Misc {
+public class A5Misc {
     public static void println(BufferedWriter bw, String s) throws IOException {
         System.out.println(s);
         bw.write(s);
@@ -44,104 +44,104 @@ public class Misc {
         max = Math.max(max, Integer.toString(m.size()).length());
         //display of the name of the columns
         for (int j = 0; j < max; j++)
-            Misc.print(bw," ");
-        Misc.print(bw,"  ");
+            A5Misc.print(bw," ");
+        A5Misc.print(bw,"  ");
         for (int i = 0; i < m.size();i++){
             if (Integer.toString(i).length() < max)
             {
                 for (int j = 0; j < max - Integer.toString(i).length(); j++)
-                    Misc.print(bw," ");
+                    A5Misc.print(bw," ");
             }
-            Misc.print(bw,Integer.toString(i));
-            Misc.print(bw," ");
+            A5Misc.print(bw,Integer.toString(i));
+            A5Misc.print(bw," ");
         }
-        Misc.println(bw,"");
+        A5Misc.println(bw,"");
         for (int j = 0; j < max; j++)
-            Misc.print(bw," ");
-        Misc.print(bw,"  ");
+            A5Misc.print(bw," ");
+        A5Misc.print(bw,"  ");
         for (int i = 0; i < m.size();i++){
                 for (int j = 0; j <= max; j++)
-                    Misc.print(bw,"_");
+                    A5Misc.print(bw,"_");
         }
-        Misc.println(bw, "");
+        A5Misc.println(bw, "");
         int it = 0;
         for (ArrayList<Integer> tab : m){
             //display of the name of the row
-            Misc.print(bw, Integer.toString(it));
+            A5Misc.print(bw, Integer.toString(it));
             if (Integer.toString(it).length() < max)
             {
                 for (int j = 0; j < max - Integer.toString(it).length(); j++)
-                    Misc.print(bw," ");
+                    A5Misc.print(bw," ");
             }
-            Misc.print(bw," ");
-            Misc.print(bw,"|");
+            A5Misc.print(bw," ");
+            A5Misc.print(bw,"|");
             it++;
             for (Integer i : tab){
                 if (i.toString().length() < max)
                 {
                     for (int j = 0; j < max - i.toString().length(); j++)
-                        Misc.print(bw," ");
+                        A5Misc.print(bw," ");
                 }
-                Misc.print(bw, Integer.toString(i));
-                Misc.print(bw," " );
+                A5Misc.print(bw, Integer.toString(i));
+                A5Misc.print(bw," " );
             }
-            Misc.println(bw,"");
+            A5Misc.println(bw,"");
         }
     }
     /**
      * A function that prints on the terminal a matrix containing numbers
      * @param m the matrix
      */
-    public static void print_matrix_valeur(ArrayList<ArrayList<Numbers>> m, BufferedWriter bw) throws IOException {
+    public static void print_matrix_valeur(ArrayList<ArrayList<A5Numbers>> m, BufferedWriter bw) throws IOException {
         int max = 0;
-        for (ArrayList<Numbers> tab : m) {
-            for (Numbers i : tab) {
+        for (ArrayList<A5Numbers> tab : m) {
+            for (A5Numbers i : tab) {
                 max = Math.max(max, i.toString().length());
             }
         }
         max = Math.max(max, Integer.toString(m.size()).length());
         //display of the name of the columns
         for (int j = 0; j < max; j++)
-            Misc.print(bw," ");
-        Misc.print(bw,"  ");
+            A5Misc.print(bw," ");
+        A5Misc.print(bw,"  ");
         for (int i = 0; i < m.size(); i++) {
             if (Integer.toString(i).length() < max) {
                 for (int j = 0; j < max - Integer.toString(i).length(); j++)
-                    Misc.print(bw," ");
+                    A5Misc.print(bw," ");
             }
-            Misc.print(bw, Integer.toString(i));
-            Misc.print(bw," ");
+            A5Misc.print(bw, Integer.toString(i));
+            A5Misc.print(bw," ");
         }
-        Misc.println(bw,"");
+        A5Misc.println(bw,"");
         for (int j = 0; j < max; j++)
-            Misc.print(bw," ");
-        Misc.print(bw," ");
+            A5Misc.print(bw," ");
+        A5Misc.print(bw," ");
         for (int i = 0; i < m.size(); i++) {
             for (int j = 0; j <= max; j++)
-                Misc.print(bw, "_");
+                A5Misc.print(bw, "_");
         }
-        Misc.println(bw,"");
+        A5Misc.println(bw,"");
         int it = 0;
-        for (ArrayList<Numbers> tab : m) {
+        for (ArrayList<A5Numbers> tab : m) {
             //display of the name of the row
-            Misc.print(bw,Integer.toString(it));
+            A5Misc.print(bw,Integer.toString(it));
             if (Integer.toString(it).length() < max) {
                 for (int j = 0; j < max - Integer.toString(it).length(); j++)
-                    Misc.print(bw," ");
+                    A5Misc.print(bw," ");
             }
-            Misc.print(bw," ");
-            Misc.print(bw,"|");
+            A5Misc.print(bw," ");
+            A5Misc.print(bw,"|");
 
             it++;
-            for (Numbers i : tab) {
+            for (A5Numbers i : tab) {
                 if (i.toString().length() < max) {
                     for (int j = 0; j < max - i.toString().length(); j++)
-                        Misc.print(bw," ");
+                        A5Misc.print(bw," ");
                 }
-                Misc.print(bw,i.toString());
-                Misc.print(bw," ");
+                A5Misc.print(bw,i.toString());
+                A5Misc.print(bw," ");
             }
-            Misc.println(bw,"");
+            A5Misc.println(bw,"");
         }
     }
 
@@ -152,11 +152,11 @@ public class Misc {
      * @param dep the first vertex
      * @param arr the last vertex
      */
-    public static void cheminPlusCourt(ArrayList<ArrayList<Integer>> ch,ArrayList<ArrayList<Numbers>> n,  int dep, int arr, BufferedWriter bw) throws IOException {
+    public static void cheminPlusCourt(ArrayList<ArrayList<Integer>> ch, ArrayList<ArrayList<A5Numbers>> n, int dep, int arr, BufferedWriter bw) throws IOException {
         if (n.get(dep).get(arr).isInfinite())
-            Misc.println(bw,"ce n'est pas possible d'aller de "+ dep + " a " + arr);
+            A5Misc.println(bw,"ce n'est pas possible d'aller de "+ dep + " a " + arr);
         else {
-            Misc.print(bw,"Le chemin le plus cours pour aller de "+ dep + " a " + arr+ " est : ");
+            A5Misc.print(bw,"Le chemin le plus cours pour aller de "+ dep + " a " + arr+ " est : ");
                 ArrayList<Integer> list = new ArrayList<>();
                 list.add(dep);
                 list.add(arr);
@@ -171,9 +171,9 @@ public class Misc {
                     }
                 }
                 for (Integer d : list){
-                    Misc.print(bw,d + " ");
+                    A5Misc.print(bw,d + " ");
                 }
-            Misc.println(bw,"");
+            A5Misc.println(bw,"");
             }
         }
 }

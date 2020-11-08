@@ -1,4 +1,4 @@
-public class Numbers {
+public class A5Numbers {
     private long value;
     private boolean infinite;
 
@@ -7,7 +7,7 @@ public class Numbers {
      * @param inf whether the number is infinite or not
      * @param value the value if the number is not infinite
      */
-    public Numbers(boolean inf, long value){
+    public A5Numbers(boolean inf, long value){
         this.value = value;
         this.infinite = inf;
     }
@@ -35,8 +35,8 @@ public class Numbers {
      * @return the sum of instance plus b
      */
 
-    public Numbers plus(Numbers b){
-        return new Numbers(this.infinite ||b.infinite, this.value + b.value);
+    public A5Numbers plus(A5Numbers b){
+        return new A5Numbers(this.infinite ||b.infinite, this.value + b.value);
     }
     /**
      * Function that compares two numbers passed in parameters and returns whether the two are different
@@ -44,7 +44,7 @@ public class Numbers {
      * @param b second number being compared
      * @return true if the numbers are different
      */
-    public static boolean diff (Numbers a, Numbers b){
+    public static boolean diff (A5Numbers a, A5Numbers b){
 
         //return a.infinite != b.infinite && (a.infinite && b.value;
         return (a.infinite == b.infinite && !a.infinite && b.value != a.value ) || (a.infinite !=b.infinite);
@@ -65,8 +65,8 @@ public class Numbers {
      * @param b second number being compared
      * @return the smallest between a and b
      */
-    public Numbers min(Numbers a, Numbers b){
-        Numbers n = a.plus(b);
+    public A5Numbers min(A5Numbers a, A5Numbers b){
+        A5Numbers n = a.plus(b);
         if(this.infinite)
             return n;
         if(n.infinite)
