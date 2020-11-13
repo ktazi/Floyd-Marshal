@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class A5Result {
+public class L3_A5_Result {
     /**
      * Function that just is used as a container for the two byproducts of Floyd-Warshall
      */
 
-    public ArrayList<ArrayList<A5Numbers>> Wn;
+    public ArrayList<ArrayList<L3_A5_Numbers>> Wn;
     public ArrayList<ArrayList<Integer>> Chem;
 
     /**
@@ -13,7 +13,7 @@ public class A5Result {
      * @param w the distance matrix D
      * @param c 'matrice des intermediaires' P
      */
-    public A5Result(ArrayList<ArrayList<A5Numbers>> w, ArrayList<ArrayList<Integer>> c) {
+    public L3_A5_Result(ArrayList<ArrayList<L3_A5_Numbers>> w, ArrayList<ArrayList<Integer>> c) {
         this.Wn = w;
         this.Chem = c;
     }

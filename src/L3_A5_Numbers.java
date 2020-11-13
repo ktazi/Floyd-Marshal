@@ -1,4 +1,4 @@
-public class A5Numbers {
+public class L3_A5_Numbers {
     private long value;
     private boolean infinite;
 
@@ -7,7 +7,7 @@ public class A5Numbers {
      * @param inf whether the number is infinite or not
      * @param value the value if the number is not infinite
      */
-    public A5Numbers(boolean inf, long value){
+    public L3_A5_Numbers(boolean inf, long value){
         this.value = value;
         this.infinite = inf;
     }
@@ -35,8 +35,8 @@ public class A5Numbers {
      * @return the sum of instance plus b
      */
 
-    public A5Numbers plus(A5Numbers b){
-        return new A5Numbers(this.infinite ||b.infinite, this.value + b.value);
+    public L3_A5_Numbers plus(L3_A5_Numbers b){
+        return new L3_A5_Numbers(this.infinite ||b.infinite, this.value + b.value);
     }
     /**
      * Function that compares two numbers passed in parameters and returns whether the two are different
@@ -44,7 +44,7 @@ public class A5Numbers {
      * @param b second number being compared
      * @return true if the numbers are different
      */
-    public static boolean diff (A5Numbers a, A5Numbers b){
+    public static boolean diff (L3_A5_Numbers a, L3_A5_Numbers b){
 
         //return a.infinite != b.infinite && (a.infinite && b.value;
         return (a.infinite == b.infinite && !a.infinite && b.value != a.value ) || (a.infinite !=b.infinite);
@@ -65,8 +65,8 @@ public class A5Numbers {
      * @param b second number being compared
      * @return the smallest between a and b
      */
-    public A5Numbers min(A5Numbers a, A5Numbers b){
-        A5Numbers n = a.plus(b);
+    public L3_A5_Numbers min(L3_A5_Numbers a, L3_A5_Numbers b){
+        L3_A5_Numbers n = a.plus(b);
         if(this.infinite)
             return n;
         if(n.infinite)
