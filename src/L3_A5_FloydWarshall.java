@@ -52,7 +52,6 @@ public class L3_A5_FloydWarshall {
         L3_A5_Misc.println(bw,"Resultat final : ");
         L3_A5_Misc.println(bw,"");
         L3_A5_Misc.print_matrix_valeur(m, bw);
-        L3_A5_Misc.print_matrix_adja(ch, bw);
         L3_A5_Result r = new L3_A5_Result(m, ch);
         return r;
     }
